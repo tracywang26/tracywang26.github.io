@@ -3,10 +3,10 @@
 <channel>
         <title>寂寞先生</title>
         <description>寂寞先生 - 陈佳伟</description>
-        <link>http://enml.github.io/blog</link>
-        <link>http://enml.github.io/blog</link>
-        <lastBuildDate>2017-05-18T17:32:26+08:00</lastBuildDate>
-        <pubDate>2017-05-18T17:32:26+08:00</pubDate>
+        <link>https://tracywang26.github.io/</link>
+        <link>https://tracywang26.github.io/</link>
+        <lastBuildDate>2017-05-18T21:02:56+08:00</lastBuildDate>
+        <pubDate>2017-05-18T21:02:56+08:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -27,8 +27,8 @@
 
 &lt;p&gt;本来是在寻找一个可以保存自己喜欢的颜色的工具，一开始想着记录在onenote，但是只能记录数值，不够直观。如果把图片粘贴过去会很繁琐并且不够雅观。后来把颜色直接合并在一张图上，但记录时每次都需要进行图片修改，繁琐也依然不美观。中午午睡后百度了一下是否有相关的在线工具，一无所获。突然想着要不自己搞一个吧！在脑海里构建了一下基本框架后觉得可行，便开始编写代码。花了三个小时总算实现了。&lt;/p&gt;
 </description>
-                <link>http://enml.github.io/blog/2014/05/20/collect_color</link>
-                <guid>http://enml.github.io/blog/2014/05/20/collect_color</guid>
+                <link>https://tracywang26.github.io//2014/05/20/collect_color</link>
+                <guid>https://tracywang26.github.io//2014/05/20/collect_color</guid>
                 <pubDate>2014-05-20T00:00:00+08:00</pubDate>
         </item>
 
@@ -186,8 +186,8 @@ def current_datetime(request):
 
 &lt;p&gt;woo! 简单优雅！这是Template设计的思想历程。&lt;/p&gt;
 </description>
-                <link>http://enml.github.io/blog/2014/05/10/template</link>
-                <guid>http://enml.github.io/blog/2014/05/10/template</guid>
+                <link>https://tracywang26.github.io//2014/05/10/template</link>
+                <guid>https://tracywang26.github.io//2014/05/10/template</guid>
                 <pubDate>2014-05-10T00:00:00+08:00</pubDate>
         </item>
 
@@ -242,8 +242,8 @@ def current_datetime(request):
     return render(request,'test/raw.htm',locals())
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <link>http://enml.github.io/blog/2014/05/03/view_render</link>
-                <guid>http://enml.github.io/blog/2014/05/03/view_render</guid>
+                <link>https://tracywang26.github.io//2014/05/03/view_render</link>
+                <guid>https://tracywang26.github.io//2014/05/03/view_render</guid>
                 <pubDate>2014-05-03T00:00:00+08:00</pubDate>
         </item>
 
@@ -273,8 +273,8 @@ def current_datetime(request):
 &lt;/ul&gt;
 
 </description>
-                <link>http://enml.github.io/blog/2014/04/27/install-jekyll</link>
-                <guid>http://enml.github.io/blog/2014/04/27/install-jekyll</guid>
+                <link>https://tracywang26.github.io//2014/04/27/install-jekyll</link>
+                <guid>https://tracywang26.github.io//2014/04/27/install-jekyll</guid>
                 <pubDate>2014-04-27T00:00:00+08:00</pubDate>
         </item>
 
@@ -467,8 +467,8 @@ Point(x=3.0, y=5.0)
 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-                <link>http://enml.github.io/blog/2014/04/25/python-code</link>
-                <guid>http://enml.github.io/blog/2014/04/25/python-code</guid>
+                <link>https://tracywang26.github.io//2014/04/25/python-code</link>
+                <guid>https://tracywang26.github.io//2014/04/25/python-code</guid>
                 <pubDate>2014-04-25T00:00:00+08:00</pubDate>
         </item>
 
@@ -484,8 +484,8 @@ Point(x=3.0, y=5.0)
 &lt;!--break--&gt;
 
 </description>
-                <link>http://enml.github.io/blog/2014/04/24/directory</link>
-                <guid>http://enml.github.io/blog/2014/04/24/directory</guid>
+                <link>https://tracywang26.github.io//2014/04/24/directory</link>
+                <guid>https://tracywang26.github.io//2014/04/24/directory</guid>
                 <pubDate>2014-04-24T00:00:00+08:00</pubDate>
         </item>
 
@@ -513,8 +513,8 @@ Point(x=3.0, y=5.0)
 &lt;/ul&gt;
 
 </description>
-                <link>http://enml.github.io/blog/2014/04/23/finish-jekyll</link>
-                <guid>http://enml.github.io/blog/2014/04/23/finish-jekyll</guid>
+                <link>https://tracywang26.github.io//2014/04/23/finish-jekyll</link>
+                <guid>https://tracywang26.github.io//2014/04/23/finish-jekyll</guid>
                 <pubDate>2014-04-23T00:00:00+08:00</pubDate>
         </item>
 
@@ -541,8 +541,8 @@ Point(x=3.0, y=5.0)
 
 &lt;p&gt;　但是当我在post.html模板里面加入中文之后，&lt;code&gt;jekyll server&lt;/code&gt;命令直接报错。解决办法是在运行服务器前先运行&lt;code&gt;chcp 65001&lt;/code&gt;命令，即可解决。在官方找到的解决办法&lt;strong&gt;Windows users: run chcp 65001 first to change the command prompt's character encoding (code page) to UTF-8 so Jekyll runs without errors.&lt;/strong&gt;&lt;/p&gt;
 </description>
-                <link>http://enml.github.io/blog/2014/04/23/chinese-messy-code</link>
-                <guid>http://enml.github.io/blog/2014/04/23/chinese-messy-code</guid>
+                <link>https://tracywang26.github.io//2014/04/23/chinese-messy-code</link>
+                <guid>https://tracywang26.github.io//2014/04/23/chinese-messy-code</guid>
                 <pubDate>2014-04-23T00:00:00+08:00</pubDate>
         </item>
 
@@ -583,8 +583,8 @@ Point(x=3.0, y=5.0)
 
 &lt;p&gt;　这条路任重而道远，真的要发展出人工智能的话，很可能要对现有的计算机体系、软硬架构、甚至编程思想统统进行颠覆才有可能。但是，100年后每个人身边陪着个高度智能的机器人作助手甚至伴侣应该没什么好争议的。那时候什么手机电脑手表眼镜通通可以扔掉了，人可以真正得到解放，这个随时随地跟着你的机器人就是你最好最强大的电子设备了。你要打电话，你就跟它说帮我call一下奥巴马；你要玩游戏，它转过身来可能后背就是一块触摸屏；你要写代码，哦，那时候应该不用写代码了……&lt;/p&gt;
 </description>
-                <link>http://enml.github.io/blog/2014/04/21/future</link>
-                <guid>http://enml.github.io/blog/2014/04/21/future</guid>
+                <link>https://tracywang26.github.io//2014/04/21/future</link>
+                <guid>https://tracywang26.github.io//2014/04/21/future</guid>
                 <pubDate>2014-04-21T00:00:00+08:00</pubDate>
         </item>
 
@@ -612,8 +612,8 @@ function prime(num){
 &lt;/pre&gt;
 
 </description>
-                <link>http://enml.github.io/blog/2011/01/12/prime</link>
-                <guid>http://enml.github.io/blog/2011/01/12/prime</guid>
+                <link>https://tracywang26.github.io//2011/01/12/prime</link>
+                <guid>https://tracywang26.github.io//2011/01/12/prime</guid>
                 <pubDate>2011-01-12T00:00:00+08:00</pubDate>
         </item>
 
