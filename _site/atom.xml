@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>寂寞先生</title>
+ <link href="http://enml.github.io/blog/" rel="self"/>
+ <link href="http://enml.github.io/blog"/>
+ <updated>2017-05-18T15:43:32+08:00</updated>
+ <id>http://enml.github.io/blog</id>
+ <author>
+   <name>陈佳伟</name>
+   <email>blah@email.test</email>
+ </author>
+
+ 
+ <entry>
+   <title>js-算出某值以内的质数</title>
+   <link href="http://enml.github.io/blog/2017/05/18/start"/>
+   <updated>2017-05-18T00:00:00+08:00</updated>
+   <id>http://enml.github.io/blog/2017/05/18/start</id>
+   <content type="html">&lt;h1&gt;js 算出某值以内的质数&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+    //算出 num 以内的所有质数
+ 
+function prime(num){
+    var list = [];
+    for(var i = 2; i &lt;= num; i++){ list.push(i); } //create a Array
+    
+    for(var i = 0; i &lt; list.length; i++){
+        for(var j = 2; j &lt; list[i]; j++){
+            if(list[i] % j == 0){
+                list.splice(i,1); //delete the non prime number.it will change the index of other elements
+                j = 2; //由于splice导致list[i+1]的index变为i,因此把j置为2以便对list[i+1]进行重新计算
+        }
+    }
+}
+&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ 
+</feed>
