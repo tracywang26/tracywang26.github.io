@@ -3,18 +3,18 @@
 permalink: /:year/:month/:day/:title 
 markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+rouge: pygments
 #mardown: redcarpet
 
 safe: false
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : 寂寞先生
+title : Tracy's Blog
 tagline: Site Tagline
 author :
-  name : 陈佳伟
-  email : blah@email.test
+  name : Tracy Wang
+  email : wanggl18@gmail.com
   github : username
   twitter : username
   feedburner : feedname
