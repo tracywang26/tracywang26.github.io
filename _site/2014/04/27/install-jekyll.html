@@ -1,11 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>install jekyll 流程</title>
     <meta name="description" content="">
-    <meta name="author" content="陈佳伟">
+    <meta name="author" content="Tracy Wang">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +17,10 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes//css/prettify.css" rel="stylesheet" type="text/css">
-    <script src="/assets/themes//js/prettify.js"></script>
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/assets/themes/twitter/js/prettify.js"></script>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -41,7 +42,7 @@
     <div class="navbar">
       <div class="navbar-inner">
        <div class="nav-narrow">
-          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">寂寞先生</span></a>
+          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">Tracy's Blog</span></a>
           <ul class="nav">
             
             
@@ -109,6 +110,7 @@
 
       <div class="content">
         
+
 <!--
 <div class="page-header">
   <h1>install jekyll 流程 </h1>
@@ -127,27 +129,30 @@
           2014
           </div>
         </div>
-      <h1>install jekyll 流程</h1>
-
+      
+<h1 id="install-jekyll-流程">install jekyll 流程</h1>
 <hr />
 
 <ul>
-<li><p>首先下载<code>ruby</code><a href="http://rubyinstaller.org/downloads/">安装ruby download</a> ，然后下载<strong>DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe</strong>。安装完<code>ruby</code>后，再安装<code>rubyGems</code>:运行<code>gem update --system</code>即可。</p></li>
-<li><p>解压DevKit，然后命令行cd到该目录，运行</p></li>
+  <li>
+    <p>首先下载<code class="highlighter-rouge">ruby</code><a href="http://rubyinstaller.org/downloads/">安装ruby download</a> ，然后下载<strong>DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe</strong>。安装完<code class="highlighter-rouge">ruby</code>后，再安装<code class="highlighter-rouge">rubyGems</code>:运行<code class="highlighter-rouge">gem update --system</code>即可。</p>
+  </li>
+  <li>
+    <p>解压DevKit，然后命令行cd到该目录，运行</p>
+  </li>
 </ul>
-
 
 <!--break-->
 
-
-<pre><code> ruby dk.rb init
+<div class="highlighter-rouge"><pre class="highlight"><code> ruby dk.rb init
  ruby dk.rb review 
  ruby dk.rb install
  gem install rdiscount --platform=ruby
 </code></pre>
+</div>
 
 <ul>
-<li>DevKit安装完后，即可安装jekyll：<code>gem install jekyll</code>.</li>
+  <li>DevKit安装完后，即可安装jekyll：<code class="highlighter-rouge">gem install jekyll</code>.</li>
 </ul>
 
 
@@ -232,7 +237,7 @@
       
       <footer class="card clearfix">
         <span style="font-size:30px;"class="fa fa-github pull-left"></span><a href="https://github.com/enml/blog/tree/jekyll-blog" style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
-        <p class="pull-right">&copy; 2011 陈佳伟
+        <p class="pull-right">&copy; 2011 Tracy Wang
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>

@@ -1,11 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>python list的技巧</title>
     <meta name="description" content="">
-    <meta name="author" content="陈佳伟">
+    <meta name="author" content="Tracy Wang">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +17,10 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes//css/prettify.css" rel="stylesheet" type="text/css">
-    <script src="/assets/themes//js/prettify.js"></script>
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/assets/themes/twitter/js/prettify.js"></script>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -41,7 +42,7 @@
     <div class="navbar">
       <div class="navbar-inner">
        <div class="nav-narrow">
-          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">寂寞先生</span></a>
+          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">Tracy's Blog</span></a>
           <ul class="nav">
             
             
@@ -109,6 +110,7 @@
 
       <div class="content">
         
+
 <!--
 <div class="page-header">
   <h1>python list的技巧 </h1>
@@ -127,13 +129,13 @@
           2014
           </div>
         </div>
-      <h1>Python list的一些技巧</h1>
-
+      
+<h1 id="python-list的一些技巧">Python list的一些技巧</h1>
 <hr />
 
 <p>列表相邻元素压缩器</p>
 
-<pre><code>&gt;&gt;&gt; a = [1, 2, 3, 4, 5, 6]
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; a = [1, 2, 3, 4, 5, 6]
 &gt;&gt;&gt; zip(*([iter(a)] * 2))
 [(1, 2), (3, 4), (5, 6)]
 &gt;&gt;&gt; group_adjacent = lambda a, k: zip(*([iter(a)] * k))
@@ -154,17 +156,16 @@
 [(1, 2), (3, 4), (5, 6)]
 &gt;&gt;&gt; group_adjacent(a, 1)
 [(1,), (2,), (3,), (4,), (5,), (6,)]
-</code></pre>
 
+</code></pre>
+</div>
 <!--break-->
 
-
 <ul>
-<li>用压缩器反转字典</li>
+  <li>用压缩器反转字典</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; m = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; m = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 &gt;&gt;&gt; m.items()
 [('a', 1), ('c', 3), ('b', 2), ('d', 4)]
 &gt;&gt;&gt; zip(m.values(), m.keys())
@@ -172,14 +173,15 @@
 &gt;&gt;&gt; mi = dict(zip(m.values(), m.keys()))
 &gt;&gt;&gt; mi
 {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+
 </code></pre>
+</div>
 
 <ul>
-<li>列表展开</li>
+  <li>列表展开</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; a = [[1, 2], [3, 4], [5, 6]]
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; a = [[1, 2], [3, 4], [5, 6]]
 &gt;&gt;&gt; list(itertools.chain.from_iterable(a))
 [1, 2, 3, 4, 5, 6]
 
@@ -197,14 +199,15 @@
 &gt;&gt;&gt; flatten = lambda x: [y for l in x for y in flatten(l)] if type(x) is list else [x]
 &gt;&gt;&gt; flatten(a)
 [1, 2, 3, 4, 5, 6, 7, 8]
+
 </code></pre>
+</div>
 
 <ul>
-<li>生成器表达式</li>
+  <li>生成器表达式</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; g = (x ** 2 for x in xrange(10))
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; g = (x ** 2 for x in xrange(10))
 &gt;&gt;&gt; next(g)
 0
 &gt;&gt;&gt; next(g)
@@ -217,40 +220,43 @@
 2025
 &gt;&gt;&gt; sum(x ** 3 for x in xrange(10) if x % 3 == 1)
 408
+
 </code></pre>
+</div>
 
 <ul>
-<li>字典推导</li>
+  <li>字典推导</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; m = {x: x ** 2 for x in range(5)}
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; m = {x: x ** 2 for x in range(5)}
 &gt;&gt;&gt; m
 {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 
 &gt;&gt;&gt; m = {x: 'A' + str(x) for x in range(10)}
 &gt;&gt;&gt; m
 {0: 'A0', 1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4', 5: 'A5', 6: 'A6', 7: 'A7', 8: 'A8', 9: 'A9'}
+
 </code></pre>
+</div>
 
 <ul>
-<li>用字典推导反转字典</li>
+  <li>用字典推导反转字典</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; m = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; m = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 &gt;&gt;&gt; m
 {'d': 4, 'a': 1, 'b': 2, 'c': 3}
 &gt;&gt;&gt; {v: k for k, v in m.items()}
 {1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+
 </code></pre>
+</div>
 
 <ul>
-<li>命名元组</li>
+  <li>命名元组</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; Point = collections.namedtuple('Point', ['x', 'y'])
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; Point = collections.namedtuple('Point', ['x', 'y'])
 &gt;&gt;&gt; p = Point(x=1.0, y=2.0)
 &gt;&gt;&gt; p
 Point(x=1.0, y=2.0)
@@ -258,14 +264,15 @@ Point(x=1.0, y=2.0)
 1.0
 &gt;&gt;&gt; p.y
 2.0
+
 </code></pre>
+</div>
 
 <ul>
-<li>继承命名元组</li>
+  <li>继承命名元组</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; class Point(collections.namedtuple('PointBase', ['x', 'y'])):
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; class Point(collections.namedtuple('PointBase', ['x', 'y'])):
 ...     __slots__ = ()
 ...     def __add__(self, other):
 ...             return Point(x=self.x + other.x, y=self.y + other.y)
@@ -274,14 +281,15 @@ Point(x=1.0, y=2.0)
 &gt;&gt;&gt; q = Point(x=2.0, y=3.0)
 &gt;&gt;&gt; p + q
 Point(x=3.0, y=5.0)
+
 </code></pre>
+</div>
 
 <ul>
-<li>有最大长度的双端队列</li>
+  <li>有最大长度的双端队列</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; last_three = collections.deque(maxlen=3)
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; last_three = collections.deque(maxlen=3)
 &gt;&gt;&gt; for i in xrange(10):
 ...     last_three.append(i)
 ...     print ', '.join(str(x) for x in last_three)
@@ -297,13 +305,12 @@ Point(x=3.0, y=5.0)
 6, 7, 8
 7, 8, 9
 </code></pre>
-
+</div>
 <ul>
-<li>可排序词典</li>
+  <li>可排序词典</li>
 </ul>
 
-
-<pre><code>&gt;&gt;&gt; m = dict((str(x), x) for x in range(10))
+<div class="highlighter-rouge"><pre class="highlight"><code>&gt;&gt;&gt; m = dict((str(x), x) for x in range(10))
 &gt;&gt;&gt; print ', '.join(m.keys())
 1, 0, 3, 2, 5, 4, 7, 6, 9, 8
 &gt;&gt;&gt; m = collections.OrderedDict((str(x), x) for x in range(10))
@@ -312,7 +319,10 @@ Point(x=3.0, y=5.0)
 &gt;&gt;&gt; m = collections.OrderedDict((str(x), x) for x in range(10, 0, -1))
 &gt;&gt;&gt; print ', '.join(m.keys())
 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
 </code></pre>
+</div>
+
 
     </div>
 
@@ -395,7 +405,7 @@ Point(x=3.0, y=5.0)
       
       <footer class="card clearfix">
         <span style="font-size:30px;"class="fa fa-github pull-left"></span><a href="https://github.com/enml/blog/tree/jekyll-blog" style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
-        <p class="pull-right">&copy; 2011 陈佳伟
+        <p class="pull-right">&copy; 2011 Tracy Wang
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>

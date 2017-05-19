@@ -1,11 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>js-算出某值以内的质数</title>
     
-    <meta name="author" content="陈佳伟">
+    <meta name="author" content="Tracy Wang">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +17,10 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes//css/prettify.css" rel="stylesheet" type="text/css">
-    <script src="/assets/themes//js/prettify.js"></script>
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/assets/themes/twitter/js/prettify.js"></script>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -41,7 +42,7 @@
     <div class="navbar">
       <div class="navbar-inner">
        <div class="nav-narrow">
-          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">寂寞先生</span></a>
+          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">Tracy's Blog</span></a>
           <ul class="nav">
             
             
@@ -109,6 +110,7 @@
 
       <div class="content">
         
+
 <!--
 <div class="page-header">
   <h1>js-算出某值以内的质数 <small>Supporting tagline</small></h1>
@@ -127,8 +129,8 @@
           2011
           </div>
         </div>
-      <h1>js 算出某值以内的质数</h1>
-
+      
+<h1 id="js-算出某值以内的质数">js 算出某值以内的质数</h1>
 <hr />
 
 <pre class="prettyprint linenums">
@@ -136,10 +138,10 @@
  
 function prime(num){
     var list = [];
-    for(var i = 2; i <= num; i++){ list.push(i); } //create a Array
+    for(var i = 2; i &lt;= num; i++){ list.push(i); } //create a Array
     
-    for(var i = 0; i < list.length; i++){
-        for(var j = 2; j < list[i]; j++){
+    for(var i = 0; i &lt; list.length; i++){
+        for(var j = 2; j &lt; list[i]; j++){
             if(list[i] % j == 0){
                 list.splice(i,1); //delete the non prime number.it will change the index of other elements
                 j = 2; //由于splice导致list[i+1]的index变为i,因此把j置为2以便对list[i+1]进行重新计算
@@ -147,7 +149,6 @@ function prime(num){
     }
 }
 </pre>
-
 
     </div>
 
@@ -232,7 +233,7 @@ function prime(num){
       
       <footer class="card clearfix">
         <span style="font-size:30px;"class="fa fa-github pull-left"></span><a href="https://github.com/enml/blog/tree/jekyll-blog" style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
-        <p class="pull-right">&copy; 2011 陈佳伟
+        <p class="pull-right">&copy; 2011 Tracy Wang
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>

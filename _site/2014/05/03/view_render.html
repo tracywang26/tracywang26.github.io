@@ -1,11 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>view传递context的方式</title>
     
-    <meta name="author" content="陈佳伟">
+    <meta name="author" content="Tracy Wang">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +17,10 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes//css/prettify.css" rel="stylesheet" type="text/css">
-    <script src="/assets/themes//js/prettify.js"></script>
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/prettify.css" rel="stylesheet" type="text/css">
+    <script src="/assets/themes/twitter/js/prettify.js"></script>
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -41,7 +42,7 @@
     <div class="navbar">
       <div class="navbar-inner">
        <div class="nav-narrow">
-          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">寂寞先生</span></a>
+          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">Tracy's Blog</span></a>
           <ul class="nav">
             
             
@@ -109,6 +110,7 @@
 
       <div class="content">
         
+
 <!--
 <div class="page-header">
   <h1>view传递context的方式 <small>Supporting tagline</small></h1>
@@ -127,16 +129,16 @@
           2014
           </div>
         </div>
-      <h1>view传递context的方式</h1>
-
+      
+<h1 id="view传递context的方式">view传递context的方式</h1>
 <hr />
 
-<p><strong> 通过view的render()方法填充template可以有以下方式：</strong></p>
+<p>** 通过view的render()方法填充template可以有以下方式：**</p>
 
 <p>1.适合于数据量小且静态的数据。在template中直接使用相关键值为标签：
-<code></code></p>
+` `</p>
 
-<pre><code>def test1(request):
+<div class="highlighter-rouge"><pre class="highlight"><code>def test1(request):
     return render(request,'test/raw.htm',{
                 'name':'Enm',
                 'age':22,
@@ -144,37 +146,38 @@
                 'ship_date': datetime.datetime.now(),
                 'ordered_warranty': False})
 </code></pre>
-
+</div>
 <!--break-->
-
 
 <p>2.通过调用属性的方式传递整个dictionary。但在template中必须使用属性方式：{{ <strong>person.</strong> name }},{\% for i,k in <strong>dict.</strong> items \%}</p>
 
-<pre><code>def test2():
+<div class="highlighter-rouge"><pre class="highlight"><code>def test2():
     person = {  'name':'Enm',
                 'age':22,
                 'company': 'Outdoor Equipment',
                 'ship_date': datetime.datetime.now(),
                 'ordered_warranty': False}
-
+    
     dict = {"name":"enm","age":"21","school":"szu"}
     return render(request,'test/raw.htm',{ 'person':person, 'dict':dict})
 </code></pre>
+</div>
 
 <p>3.使用<strong>locals(),locals()</strong> 是个字典，直接赋值给变量。很明显这种方式更加优雅和便捷，但缺点就是它会把所有的dictionary都传递，也就是说它默认传递的值可能会比你预想中的多。</p>
 
-<p>   template中仍然必须使用属性方式：{{ <strong>person.</strong> name }},{\% for i,k in <strong>dict.</strong> items \%}</p>
+<p>template中仍然必须使用属性方式：{{ <strong>person.</strong> name }},{\% for i,k in <strong>dict.</strong> items \%}</p>
 
-<pre><code>def test3():
+<div class="highlighter-rouge"><pre class="highlight"><code>def test3():
     person = {  'name': 'Enm',
                 'age':22,
                 'company': 'Outdoor Equipment',
                 'ship_date': datetime.datetime.now(),
                 'ordered_warranty': False}
-
+    
     dict = {"name":"enm","age":"21","school":"szu"}
     return render(request,'test/raw.htm',locals())
 </code></pre>
+</div>
 
     </div>
 
@@ -259,7 +262,7 @@
       
       <footer class="card clearfix">
         <span style="font-size:30px;"class="fa fa-github pull-left"></span><a href="https://github.com/enml/blog/tree/jekyll-blog" style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
-        <p class="pull-right">&copy; 2011 陈佳伟
+        <p class="pull-right">&copy; 2011 Tracy Wang
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
